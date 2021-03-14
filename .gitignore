@@ -1,0 +1,9 @@
+bower_components/
+node_modules/
+stylesheets/
+javascripts/
+wordpress/
+vendor/
+.idea/
+README1.MD
+*.DS_Store

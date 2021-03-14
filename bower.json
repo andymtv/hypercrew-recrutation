@@ -1,0 +1,21 @@
+{
+  "name": "app",
+  "description": "",
+  "main": "index.js",
+  "license": "ISC",
+  "homepage": "",
+  "dependencies": {
+    "Font-Awesome": "^5.15.2",
+    "swiper": "^6.5.0",
+    "animejs": "^3.2.1",
+    "jquery": "^3.6.0",
+    "less": "^4.1.1"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
