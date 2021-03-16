@@ -1,38 +1,54 @@
 // init Swiper:
- const swiper = new Swiper('.swiper-container', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
-    observer: true,
-    observeParents: true,
-    rebuildOnUpdate: true,
+const swiper = new Swiper('.swiper-container', {
+  // Optional parameters
+  direction: 'horizontal',
+  speed: 1000,
+  loop: true,
+  slidesPerView: 1,
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+
+  observer: true,
+  observeParents: true,
+  rebuildOnUpdate: true, 
+  watchSlidesVisibility: true,
+  watchSlidesProgress: true,
   
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
-  });
+});
+
+swiper.update();
 
 document.querySelector('.swiper-button-next').addEventListener('click', () => {
-    const headerContent = document.querySelector('.header-content');
+    swiper.update();
+    const headerContent = document.querySelector('.header-content-bg');
     if (headerContent.style.backgroundImage == 'url("assets/img/01.png")') {
-        headerContent.style.backgroundImage = 'url("assets/img/02.png")';
+      headerContent.style.transition = '0.5s';
+      headerContent.style.backgroundImage = 'url("assets/img/02.png")';
     } else {
-        headerContent.style.backgroundImage = 'url("assets/img/01.png")';
+      headerContent.style.transition = '0.5s';
+      headerContent.style.backgroundImage = 'url("assets/img/01.png")';
     }
 })
 
 document.querySelector('.swiper-button-prev').addEventListener('click', () => {
-    const headerContent = document.querySelector('.header-content');
-    if (headerContent.style.backgroundImage == 'url("assets/img/01.png")') {
-        headerContent.style.backgroundImage = 'url("assets/img/02.png")';
-    } else {
-        headerContent.style.backgroundImage = 'url("assets/img/01.png")';
-    }
+  swiper.update();
+  const headerContent = document.querySelector('.header-content-bg');
+  if (headerContent.style.backgroundImage == 'url("assets/img/01.png")') {
+    headerContent.style.transition = '0.5s';
+    headerContent.style.backgroundImage = 'url("assets/img/02.png")';
+  } else {
+    headerContent.style.transition = '0.5s';
+    headerContent.style.backgroundImage = 'url("assets/img/01.png")';
+  }
 })
+
+ 

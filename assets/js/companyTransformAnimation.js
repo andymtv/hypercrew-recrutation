@@ -25,7 +25,7 @@ document.addEventListener('scroll', () => {
         isAnimationStarted = true;
 
         let tl = anime.timeline({
-            delay: 150
+            delay: 750
         });
         
         tl.add({
