@@ -22,6 +22,14 @@ function changeFontColor(){
             if(i > 4) {
                 navMenuItems[i].classList.add('item-inverted')
             }
+        } else if (window.innerWidth >= 768) {
+            if(i >= 0) {
+                navMenuItems[i].classList.add('item-inverted')
+            }
+        } else if (window.innerWidth >= 360) {
+            if(i >= 0) {
+                navMenuItems[i].classList.add('item-inverted')
+            }
         }
     }
 }

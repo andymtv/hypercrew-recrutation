@@ -25,6 +25,12 @@
                       
                 </div>
                 <div class="nav-menu--container">
+                    <button class="btn-hide">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="0" y1="0" x2="70" y2="70" stroke="black" class="btn-hide--line--green" />
+                            <line x1="0" y1="70" x2="70" y2="0" stroke="black" class="btn-hide--line--white" />
+                          </svg>
+                    </button>
                     <ul class="nav-menu">
                         <li class="nav-menu--item"><a href="#">Poznaj nas</a></li>
                         <li class="nav-menu--item"><a href="#">Oferty pracy</a></li>
@@ -295,12 +301,12 @@
                         <h2 class="footer-form-title">Porozmawiajmy</h2>
                     </div>
                     <form action="" class="footer-form">
-                        <input type="text" placeholder="Imię" class="footer-form--input footer-form--input-name">
-                        <input type="text" placeholder="Adrese-mail" class="footer-form--input footer-form--input-email">
-                        <input type="text" placeholder="Telefon" class="footer-form--input footer-form--input-phone">
-                        <textarea name="" id="" cols="30" rows="10" type="text" placeholder="Wiadomość" class="footer-form--textarea-message"></textarea>
+                        <input type="text" placeholder="Imię" class="footer-form--input footer-form--input-name" required>
+                        <input type="text" placeholder="Adres e-mail" class="footer-form--input footer-form--input-email" required>
+                        <input type="text" placeholder="Telefon" class="footer-form--input footer-form--input-phone" required>
+                        <textarea name="" id="" cols="30" rows="10" type="text" placeholder="Wiadomość" class="footer-form--textarea-message" required></textarea>
                         <div class="footer-form--checkbox-container">
-                            <input type="checkbox" class="footer-form--checkbox" id="check-agreement-checkbox">
+                            <input type="checkbox" class="footer-form--checkbox" id="check-agreement-checkbox" required='Zaznacz zgodę'>
                             <label for="check-agreement-checkbox" class="footer-form--checkbox-custom-label" id='check-agreement-label'></label>
                             <div class="footer-form--agreement">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quia nisi ipsum quos id saepe nihil ab dicta amet vero fuga reiciendis animi officiis ipsa nobis deleniti, incidunt, sequi accusantium laboriosam est pariatur quaerat dolores libero? Ab laudantium harum odio aliquam repudiandae hic. Atque, explicabo dignissimos voluptate iusto assumenda ipsa?</div>
                             <div class="show-more--container">
@@ -404,6 +410,7 @@
     <script src="bower_components\animejs\lib\anime.min.js"></script>
     <script src="bower_components\swiper\build\swiper-bundle.js"></script>
 
+    <script src="assets/js/customValidation.js"></script>
     <script src="assets/js/buttonMoreAnimation.js"></script>
     <script src="assets/js/cookiesPopUpAnimation.js"></script>
     <script src="assets/js/customSlider.js"></script>
