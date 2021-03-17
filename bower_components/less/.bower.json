@@ -1,0 +1,15 @@
+{
+  "name": "less",
+  "homepage": "https://github.com/less/less",
+  "version": "4.1.1",
+  "_release": "4.1.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v4.1.1",
+    "commit": "2dff3673f62631226b69f723468039beb2d94f75"
+  },
+  "_source": "https://github.com/less/less.git",
+  "_target": "^4.1.1",
+  "_originalSource": "less",
+  "_direct": true
+}
