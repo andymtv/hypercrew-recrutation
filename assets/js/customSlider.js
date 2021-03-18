@@ -30,31 +30,104 @@ swiperHeader.update();
 const headerContent = document.querySelector('.header-content-bg');
 const titlesAndTexts = document.querySelectorAll('.header-content-title, .header-content-text');
 
-document.querySelector('.swiper-button-next-header').addEventListener('click', () => {
+document.addEventListener('DOMContentLoaded', () => {
+  if (window.innerWidth >=751) { 
+    headerContent.style.backgroundImage = 'url("assets/img/01.png")';
+    setCustomSliderBg();
+  } else {
+    headerContent.style.backgroundImage = 'url("assets/img/01small.png")';
+    setCustomSliderBg();
+  } 
+});
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth >=751) { 
+    headerContent.style.backgroundImage = 'url("assets/img/01.png")';
+    setCustomSliderBg();
+  } else {
+    headerContent.style.backgroundImage = 'url("assets/img/01small.png")';
+    setCustomSliderBg();
+  } 
+});
+
+function setCustomSliderBg() {
+  document.querySelector('.swiper-button-next-header').addEventListener('click', () => {
+    swiperHeader.update();
+  
+    if (window.innerWidth >=751) {
+        if (headerContent.style.backgroundImage == 'url("assets/img/01.png")') {
+        headerContent.style.transition = '0.5s';
+        headerContent.style.backgroundImage = 'url("assets/img/02.png")';
+      } else {
+        headerContent.style.transition = '0.5s';
+        headerContent.style.backgroundImage = 'url("assets/img/01.png")';
+      }
+    } else {
+      if (headerContent.style.backgroundImage == 'url("assets/img/01small.png")') {
+        headerContent.style.transition = '0.5s';
+        headerContent.style.backgroundImage = 'url("assets/img/02small.png")';
+      } else {
+        headerContent.style.transition = '0.5s';
+        headerContent.style.backgroundImage = 'url("assets/img/01small.png")';
+      }
+    }
+  })
+
+  document.querySelector('.swiper-button-prev-header').addEventListener('click', () => {
     swiperHeader.update();
     
-    if (headerContent.style.backgroundImage == 'url("assets/img/01.png")') {
-
-      
+    if (window.innerWidth >=751) {
+      if (headerContent.style.backgroundImage == 'url("assets/img/01.png")') {
       headerContent.style.transition = '0.5s';
       headerContent.style.backgroundImage = 'url("assets/img/02.png")';
     } else {
       headerContent.style.transition = '0.5s';
       headerContent.style.backgroundImage = 'url("assets/img/01.png")';
     }
+  } else {
+    if (headerContent.style.backgroundImage == 'url("assets/img/01small.png")') {
+      headerContent.style.transition = '0.5s';
+      headerContent.style.backgroundImage = 'url("assets/img/02small.png")';
+    } else {
+      headerContent.style.transition = '0.5s';
+      headerContent.style.backgroundImage = 'url("assets/img/01small.png")';
+    }
+  }
+  })
+}
+
+// Init Swiper Container 3
+
+const swiperContainer3 = new Swiper('.swiper-container-reason', {
+  // Optional parameters
+  direction: 'horizontal',
+  speed: 500,
+  loop: true,
+  slidesPerView: 1,
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next-reason',
+    prevEl: '.swiper-button-prev-reason',
+  },
+
+  observer: true,
+  observeParents: true,
+  rebuildOnUpdate: true, 
+  watchSlidesVisibility: true,
+  watchSlidesProgress: true,
+  
+});
+
+document.querySelector('.swiper-button-next-reason').addEventListener('click', () => {
+  swiperContainer3.update();
 })
 
-document.querySelector('.swiper-button-prev-header').addEventListener('click', () => {
-  swiperHeader.update();
-  
-  if (headerContent.style.backgroundImage == 'url("assets/img/01.png")') {
-    headerContent.style.transition = '0.5s';
-    headerContent.style.backgroundImage = 'url("assets/img/02.png")';
-  } else {
-    headerContent.style.transition = '0.5s';
-    headerContent.style.backgroundImage = 'url("assets/img/01.png")';
-  }
+document.querySelector('.swiper-button-prev-reason').addEventListener('click', () => {
+  swiperContainer3.update();
 })
+
+// Init Swiper Container 5
 
 // Init Swiper Container 4
 
@@ -94,7 +167,16 @@ const swiperContainer5 = new Swiper('.swiper-container-employee', {
   direction: 'horizontal',
   speed: 500,
   loop: true,
-  slidesPerView: 2,
+  breakpoints: {
+    750: {
+      slidesPerView: 2,
+    },
+    
+    749: {
+      slidesPerView: 1,
+    }
+
+  },
 
   // Navigation arrows
   navigation: {
@@ -126,7 +208,16 @@ const swiperFooter = new Swiper('.swiper-container-logotype', {
   direction: 'horizontal',
   speed: 500,
   loop: true,
-  slidesPerView: 4,
+  breakpoints: {
+    750: {
+      slidesPerView: 4,
+    },
+    
+    350: {
+      slidesPerView: 2,
+    }
+
+  },
 
   // Navigation arrows
   navigation: {
@@ -154,6 +245,7 @@ document.querySelector('.swiper-button-prev-logotype').addEventListener('click',
 document.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => {
     swiperHeader.update();
+    swiperContainer3.update();
     swiperContainer4.update();
     swiperContainer5.update();
     swiperFooter.update();

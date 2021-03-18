@@ -3,32 +3,32 @@
 const container = document.querySelector('.footer-form--agreement');
 const containerBtn = document.querySelector('.show-more--container');
 const btn = document.querySelector('.show-more');
-console.log(containerBtn);
 containerBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    console.log(containerBtn.childNodes);
     if (containerBtn.childNodes[1].tagName == 'BUTTON') {
-        container.style.height = '28px';
+        container.style.height = window.innerWidth >= 751 ? '28px' : '20px';
         containerBtn.innerHTML = '';
         containerBtn.innerHTML = `
         <i class="fas fa-chevron-left"></i>
         <i class="fas fa-chevron-left"></i>
         <button class="show-more">zwiń</button>`;
-
+        document.querySelector('.footer-form--checkbox-container').style.alignItems = 'flex-start';
         anime({
             targets: container,
-            height: 28 + container.scrollHeight,
+            height: (window.innerWidth >= 751 ? 28 : 20) + container.scrollHeight,
             duration: 1000,
             easing: 'spring(1, 80, 10, 0)',
         })
         // btn.textContent = 'zwiń';
     } else if (containerBtn.childNodes[1].tagName == 'I') {
-        console.log(containerBtn);
         anime({
             targets: container,
-            height: 28,
+            height: window.innerWidth >= 751 ? 28 : 20,
             duration: 1000,
             easing: 'spring(1, 80, 10, 0)',
+            complete: function() {
+                document.querySelector('.footer-form--checkbox-container').style.alignItems = 'center';
+            },
         })
         containerBtn.innerHTML = '';
         containerBtn.innerHTML = `
