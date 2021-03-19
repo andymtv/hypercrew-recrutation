@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="bower_components/Font-Awesome/css/all.css">
     <link rel="stylesheet" href="bower_components/Font-Awesome/css/brands.css">
     <link rel="stylesheet" href="bower_components/Font-Awesome/css/solid.css">
-    <link rel="stylesheet" href="bower_components/swiper/build/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
     <link rel="shortcut icon" href="assets/img/icon.png" type="image/x-icon">
     <link rel="stylesheet/less" type="text/css" href="assets/less/styles.less" />
     <title>Sunrise</title>
@@ -214,7 +214,7 @@
                         <div class="container-4-job">
                             <div class="container-4-job--title">Lorem ipsum dolor sit amet consectetur, adipisicing </div>
                             <div class="container-4-job--location">Poland</div>
-                            <button class="container-4-job--button btn-more">Więcej<i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i></button>
+                            <a class="container-4-job--button btn-more">Więcej<i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i></a>
                             <svg xmlns="http://www.w3.org/2000/svg" width="300" height="285" viewBox="0 0 300 300">
                                 <defs>
                                 <style>
@@ -232,7 +232,7 @@
                         <div class="container-4-job">
                             <div class="container-4-job--title">Lorem ipsum dolor sit amet consectetur, adipisicing </div>
                             <div class="container-4-job--location">Poland</div>
-                            <button class="container-4-job--button btn-more">Więcej<i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i></button>
+                            <a class="container-4-job--button btn-more">Więcej<i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i></a>
                             <svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
                                 <defs>
                                 <style>
@@ -250,7 +250,7 @@
                         <div class="container-4-job">
                             <div class="container-4-job--title">Lorem ipsum dolor sit amet consectetur, adipisicing </div>
                             <div class="container-4-job--location">Poland</div>
-                            <button class="container-4-job--button btn-more">Więcej<i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i></button>
+                            <a class="container-4-job--button btn-more">Więcej<i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i></a>
                             <svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
                         <defs>
                           <style>
@@ -281,7 +281,7 @@
                 <div class="container-4-job">
                     <div class="container-4-job--title">Lorem ipsum dolor sit amet consectetur, adipisicing </div>
                     <div class="container-4-job--location">Poland</div>
-                    <button class="container-4-job--button btn-more">Więcej<i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i></button>
+                    <a class="container-4-job--button btn-more">Więcej<i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i></a>
                     <svg xmlns="http://www.w3.org/2000/svg" width="300" height="285" viewBox="0 0 300 285">
                         <defs>
                           <style>
@@ -297,7 +297,7 @@
                 <div class="container-4-job">
                     <div class="container-4-job--title">Lorem ipsum dolor sit amet consectetur, adipisicing </div>
                     <div class="container-4-job--location">Poland</div>
-                    <button class="container-4-job--button btn-more">Więcej<i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i></button>
+                    <a class="container-4-job--button btn-more">Więcej<i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i></a>
                     <svg xmlns="http://www.w3.org/2000/svg" width="300" height="285" viewBox="0 0 300 285">
                         <defs>
                           <style>
@@ -314,7 +314,7 @@
                 <div class="container-4-job">
                     <div class="container-4-job--title">Lorem ipsum dolor sit amet consectetur, adipisicing </div>
                     <div class="container-4-job--location">Poland</div>
-                    <button class="container-4-job--button btn-more">Więcej<i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i></button>
+                    <a class="container-4-job--button btn-more">Więcej<i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i></a>
                     <svg xmlns="http://www.w3.org/2000/svg" width="300" height="285" viewBox="0 0 300 285">
                         <defs>
                           <style>
@@ -444,7 +444,7 @@
                     <div class="footer-form-title--container">
                         <h2 class="footer-form-title">Porozmawiajmy</h2>
                     </div>
-                    <form action="" class="footer-form">
+                    <form action="sendform.php" class="footer-form">
                         <input type="text" placeholder="Imię" class="footer-form--input footer-form--input-name" required>
                         <input type="text" placeholder="Adres e-mail" class="footer-form--input footer-form--input-email" required>
                         <input type="text" placeholder="Telefon" class="footer-form--input footer-form--input-phone" required>
@@ -581,7 +581,7 @@
     </div>
     <script src="bower_components\less\dist\less.min.js"></script>
     <script src="bower_components\animejs\lib\anime.min.js"></script>
-    <script src="bower_components\swiper\build\swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
 
     <script src="assets/js/customValidation.js"></script>
     <script src="assets/js/buttonMoreAnimation.js"></script>
@@ -591,5 +591,6 @@
     <script src="assets/js/navBarFontColorChange.js"></script>
     <script src="assets/js/companyTransformAnimation.js"></script>
     <script src="assets/js/showHideMenu.js"></script>
+    <script src="assets/js/showJobOffers.js"></script>
 </body>
 </html>
