@@ -10,4 +10,5 @@ A website made for Hypercrew Recruitment process
     2.1 If you are using VS Code then install 'Live Server' extension made by Ritwick Dey
     2.2 Restart VS Code
     2.3 Open the folder created by 'git clone' command in VS Code
-    2.4 Click 'Go Live' on the bottom status bar
+    2.4 Open the 'index.html' file
+    2.5 Click 'Go Live' on the bottom status bar
