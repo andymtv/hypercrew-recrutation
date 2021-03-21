@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    xmlHttp.open('GET', './../../jobOffers.json', true);
+    xmlHttp.open('GET', 'https://andymtv.github.io/hypercrew-recrutation/jobOffers.json', true);
     xmlHttp.send();
 });
 
