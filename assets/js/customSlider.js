@@ -241,7 +241,8 @@ document.querySelector('.swiper-button-prev-logotype').addEventListener('click',
   swiperContainer5.update();
 })
 
-
+// Each swiper needs to be updated because of their internal work principles
+// If do not do that then they will not work properly
 document.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => {
     swiperHeader.update();
