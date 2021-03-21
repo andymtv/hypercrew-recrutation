@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    xmlHttp.open('GET', './jobOffers.json', true);
+    xmlHttp.open('GET', './../../jobOffers.json', true);
     xmlHttp.send();
 });
 
