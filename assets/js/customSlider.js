@@ -250,6 +250,6 @@ document.addEventListener('DOMContentLoaded', () => {
     swiperContainer4.update();
     swiperContainer5.update();
     swiperFooter.update();
-  }, 100)
+  }, 300)
 
 })

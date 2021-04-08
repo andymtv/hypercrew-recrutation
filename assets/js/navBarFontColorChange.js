@@ -18,6 +18,10 @@ function changeFontColor(){
             if(i > 3) {
                 navMenuItems[i].classList.add('item-inverted')
             }
+        } else if (window.innerWidth >= 1600) {
+            if(i > 3) {
+                navMenuItems[i].classList.add('item-inverted')
+            }
         } else if (window.innerWidth >= 1350) {
             if(i > 4) {
                 navMenuItems[i].classList.add('item-inverted')

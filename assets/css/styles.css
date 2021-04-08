@@ -218,6 +218,7 @@ body {
   border: none;
   position: relative;
   display: none;
+  cursor: pointer;
 }
 .btn-hide:hover,
 .btn-hide:focus,
@@ -242,12 +243,19 @@ body {
   position: relative;
   align-self: flex-end;
   display: none;
+  cursor: pointer;
+  transform: scale(1, 1) rotate(0deg);
+  transition: 0.3s;
 }
 .btn-show:hover,
 .btn-show:focus,
 .btn-show:active {
   border: none;
   outline: none;
+}
+.btn-show:hover {
+  transform: scale(1.1, 1.1) rotate(-90deg);
+  transition: 0.3s;
 }
 .btn-show--line--green {
   stroke: #2bd483;
@@ -360,6 +368,8 @@ body {
   margin-left: 70px;
 }
 .nav-menu--item a {
+  display: inline-block;
+  width: 100%;
   color: black;
   font-family: 'Barlow Semi Condensed', sans-serif;
   font-weight: 500;
@@ -1796,12 +1806,15 @@ body {
     flex-direction: column;
     justify-content: start;
     padding: 50px 42px;
+    min-height: 520px;
   }
   .nav-menu--item {
     margin: 20px 0 0 0;
-    padding: 0 0 20px 20px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     width: 100%;
+  }
+  .nav-menu--item a {
+    padding: 0 0 20px 20px;
   }
   .nav-menu li:nth-child(5) {
     border-bottom: none;

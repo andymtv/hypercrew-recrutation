@@ -96,6 +96,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 containerJob.innerHTML = '';
                 showJobOffers(containerJob, json)
             }
+            
+            // Re-render job offers container when window is resized
+            window.addEventListener('resize', () => {
+                if (window.innerWidth <= 749 ) {
+                    containerJob.innerHTML = '';
+                    showJobOffers(containerJob, json)
+                } else if (window.innerWidth >= 750 && window.innerWidth <= 1349) {
+                    swiperWrapper.innerHTML = '';
+                    showJobOffers(swiperWrapper, json, true)
+                } else if (window.innerWidth >= 1350) {
+                    containerJob.innerHTML = '';
+                    showJobOffers(containerJob, json)
+                }
+            });
         }
     }
 
@@ -104,27 +118,27 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// Re-render job offers container when window is resized
-window.addEventListener('resize', () => {
-    let xmlHttp = new XMLHttpRequest();
 
-    xmlHttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            const json = this.responseText;
+// window.addEventListener('resize', () => {
+//     let xmlHttp = new XMLHttpRequest();
 
-            if (window.innerWidth <= 749 ) {
-                containerJob.innerHTML = '';
-                showJobOffers(containerJob, json)
-            } else if (window.innerWidth >= 750 && window.innerWidth <= 1349) {
-                swiperWrapper.innerHTML = '';
-                showJobOffers(swiperWrapper, json, true)
-            } else if (window.innerWidth >= 1350) {
-                containerJob.innerHTML = '';
-                showJobOffers(containerJob, json)
-            }
-        }
-    }
+//     xmlHttp.onreadystatechange = function() {
+//         if (this.readyState == 4 && this.status == 200) {
+//             const json = this.responseText;
 
-    xmlHttp.open('GET', '../../jobOffers.json', true);
-    xmlHttp.send();
-});
+//             if (window.innerWidth <= 749 ) {
+//                 containerJob.innerHTML = '';
+//                 showJobOffers(containerJob, json)
+//             } else if (window.innerWidth >= 750 && window.innerWidth <= 1349) {
+//                 swiperWrapper.innerHTML = '';
+//                 showJobOffers(swiperWrapper, json, true)
+//             } else if (window.innerWidth >= 1350) {
+//                 containerJob.innerHTML = '';
+//                 showJobOffers(containerJob, json)
+//             }
+//         }
+//     }
+
+//     xmlHttp.open('GET', '../../jobOffers.json', true);
+//     xmlHttp.send();
+// });
